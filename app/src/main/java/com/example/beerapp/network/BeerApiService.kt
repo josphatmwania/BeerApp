@@ -18,12 +18,15 @@ private val retrofit = Retrofit.Builder()
 
 
 interface BeerApiService {
+    @GET("beers")
+    fun getBeers()
 
-    @ GET("beers")
-    fun getBeers(
+}
 
-    )
-
+object BeersApi {
+    val retrofitService : BeerApiService by lazy {
+        retrofit.create(BeerApiService::class.java)
+    }
 }
 
 
