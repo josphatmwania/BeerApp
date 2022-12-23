@@ -21,7 +21,7 @@ class OverviewViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val listResult = BeersApi.retrofitService.getBeers()
-                _status.value = listResult
+                _status.value = "Success: ${listResult.size} Beers Images Retrieved"
             } catch (e: Exception) {
                 _status.value = "Failure: ${e.message}"
             }

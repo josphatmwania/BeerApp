@@ -29,7 +29,7 @@ private val retrofit = Retrofit.Builder()
 
 interface BeerApiService {
     @GET("beers")
-    suspend fun getBeers() : String
+    suspend fun getBeers() : List<BeerImages>
 
 }
 
