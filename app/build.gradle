@@ -50,5 +50,12 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
 
+    //Lifecycle ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+  // Morshi dependencies
+
+    implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
+
 
 }
