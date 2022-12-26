@@ -14,6 +14,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        databinding {
+            enabled = true
+        }
     }
 
     buildTypes {
@@ -22,6 +26,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -61,6 +66,10 @@ dependencies {
   // Coil dependencies
 
     implementation "io.coil-kt:coil:2.2.2"
+
+    // Data binding
+
+    kapt "com.android.databinding:compiler:$android_plugin_version"
 
 
 
