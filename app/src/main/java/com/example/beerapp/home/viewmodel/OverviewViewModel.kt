@@ -1,6 +1,7 @@
 package com.example.beerapp.home.viewmodel
 
 import androidx.lifecycle.*
+import com.example.beerapp.network.BeerImages
 
 import com.example.beerapp.network.BeersApi
 import kotlinx.coroutines.launch
@@ -8,6 +9,13 @@ import kotlinx.coroutines.launch
 
 class OverviewViewModel : ViewModel() {
     private val _status = MutableLiveData<String>()
+
+    /**
+     *  Livedata property to store KT object received
+     */
+
+    private val _images = MutableLiveData<BeerImages>()
+    val images: LiveData<BeerImages> = _images
 
     val status: LiveData<String> = _status
 
