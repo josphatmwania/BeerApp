@@ -15,9 +15,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        databinding {
-            enabled = true
-        }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+
+    }
     }
 
     buildTypes {
@@ -26,7 +28,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -38,7 +39,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -53,7 +54,7 @@ dependencies {
     // Retrofit with Scalar Converter
     implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
 
-    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 
     //Lifecycle ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
@@ -69,7 +70,6 @@ dependencies {
 
     // Data binding
 
-    kapt "com.android.databinding:compiler:$android_plugin_version"
 
 
 
@@ -77,3 +77,4 @@ dependencies {
 
 
 }
+
