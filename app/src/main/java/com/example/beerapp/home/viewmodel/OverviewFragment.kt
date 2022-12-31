@@ -34,7 +34,10 @@ class OverviewFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        binding.viewmodel = viewModel
+        /**
+         *  Binding access to the OverviewModel
+         */
+        binding.viewModel = viewModel
 
         return binding.root
 
