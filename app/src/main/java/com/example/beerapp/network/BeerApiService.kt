@@ -1,6 +1,6 @@
 package com.example.beerapp.network
 
-import com.squareup.moshi.KotlinJsonAdapterFactory
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.http.GET
 import com.squareup.moshi.Moshi
@@ -41,7 +41,3 @@ object BeersApi {
 
 
 
-//class BeerApiService {
-//
-//
-//}
