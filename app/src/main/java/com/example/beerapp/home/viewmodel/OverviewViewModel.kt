@@ -28,8 +28,14 @@ class OverviewViewModel : ViewModel() {
     private fun getBeers() {
         viewModelScope.launch {
             try {
-                val listResult = BeersApi.retrofitService.getBeers()
-                _status.value = "Success: ${listResult.size} Beers Images Retrieved"
+//                val listResult = BeersApi.retrofitService.getBeers()
+
+                _images.value = BeersApi.retrofitService.getBeers()[0]
+                /**
+                 * Displaying the first IMage URL from the beer Images list
+                 */
+
+                _status.value = " First Beer image URL : ${_images.value!!.imgSrcUrl}"
             } catch (e: Exception) {
                 _status.value = "Failure: ${e.message}"
             }
