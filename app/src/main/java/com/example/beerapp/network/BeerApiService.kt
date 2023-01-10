@@ -14,7 +14,8 @@ private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
 
-private const val BASE_URL = "https://api.punkapi.com/v2/beers/random"
+//private const val BASE_URL = "https://api.punkapi.com/v2/beers/random"
+private const val BASE_URL = "https://android-kotlin-fun-mars-server.appspot.com/"
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
