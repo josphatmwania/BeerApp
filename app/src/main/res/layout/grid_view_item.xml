@@ -8,12 +8,12 @@ xmlns:tools="http://schemas.android.com/tools">
         type="com.example.beerapp.network.BeerImages" />
 </data>
 <ImageView
-    android:id="@+id/mars_image"
+    android:id="@+id/beers_image"
     android:layout_width="wrap_content"
     android:layout_height="170dp"
     android:scaleType="fitXY"
     android:adjustViewBounds="true"
     android:padding="2dp"
-    app:imageUrl="@{photo.imgSrcUrl}"
+    app:imageUrl="@{image.imgSrcUrl}"
     tools:src="@tools:sample/backgrounds/scenic"/>
 </layout>
